@@ -3,6 +3,7 @@ const ebox = document.getElementById('erbox')
 const fetchJSON = (a) => {
 	const f = new XMLHttpRequest()
 	f.open('GET', a, false)
+	f.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
 	f.onreadystatechange = oEvent => {
 		if (f.readyState === 4) {
 			if (f.status === 200) {} else {
